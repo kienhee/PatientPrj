@@ -1,0 +1,46 @@
+# Project: PatientPrj
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = PatientManager.o Department.o Patient.o DepartmentList.o PatientList.o InputHelper.o StringUtils.o
+LINKOBJ  = PatientManager.o Department.o Patient.o DepartmentList.o PatientList.o InputHelper.o StringUtils.o
+LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc -static -Wl,--dynamicbase
+INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = PatientPrj.exe
+CXXFLAGS = $(CXXINCS) -std=c++17 -Wall -Wextra -Wshadow
+CFLAGS   = $(INCS) 
+DEL      = C:\Program Files (x86)\Embarcadero\Dev-Cpp\devcpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+PatientManager.o: PatientManager.cpp
+	$(CPP) -c PatientManager.cpp -o PatientManager.o $(CXXFLAGS)
+
+Department.o: Department.cpp
+	$(CPP) -c Department.cpp -o Department.o $(CXXFLAGS)
+
+Patient.o: Patient.cpp
+	$(CPP) -c Patient.cpp -o Patient.o $(CXXFLAGS)
+
+DepartmentList.o: DepartmentList.cpp
+	$(CPP) -c DepartmentList.cpp -o DepartmentList.o $(CXXFLAGS)
+
+PatientList.o: PatientList.cpp
+	$(CPP) -c PatientList.cpp -o PatientList.o $(CXXFLAGS)
+
+InputHelper.o: InputHelper.cpp
+	$(CPP) -c InputHelper.cpp -o InputHelper.o $(CXXFLAGS)
+
+StringUtils.o: StringUtils.cpp
+	$(CPP) -c StringUtils.cpp -o StringUtils.o $(CXXFLAGS)

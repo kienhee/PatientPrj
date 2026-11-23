@@ -1,0 +1,19 @@
+g++ (tdm64-1) 9.2.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+01 PASS - load and list departments
+02 PASS - validate and add a department
+03 PASS - department lookup with existing and missing IDs
+04 PASS - update department and synchronize patient display
+05 PASS - save and reload departments
+06 PASS - sort by department and patient ID, preserve storage order
+07 PASS - partial department name, mixed case and no match
+08 PASS - validate and add a patient from the department menu
+09 PASS - cancel, confirm and persist deletion
+10 PASS - update patient, change department and keep optional fields
+11 PASS - save and reload patients
+12 PASS - missing files, bad rows, invalid menu and exit without saving
+Extra PASS - propagate renamed department ID to both files and exit cleanly on EOF
+All tests passed.

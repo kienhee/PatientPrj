@@ -1,0 +1,4 @@
+P01,D01,Nguyen An,Hypertension,52
+P02,D02,Tran Binh,Fever,9
+P03,D03,Le Chi,Migraine,34
+P04,D01,Pham Dung,Arrhythmia,61
